@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/error.mp3-0357183836d87f81c18c614ade4a077e.mp3str"
+
+[deps]
+
+source_file="res://levels/error.mp3"
+dest_files=[ "res://.import/error.mp3-0357183836d87f81c18c614ade4a077e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,158 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Elements.tres" type="TileSet" id=2]
+[ext_resource path="res://levels/board1.png" type="Texture" id=3]
+[ext_resource path="res://mainmenu2.mp3" type="AudioStream" id=4]
+[ext_resource path="res://Level20.gd" type="Script" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 36.7404, 36.6964 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8, 168 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 8, 128 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 63.5, 8 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 8, 18 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 8, 8 )
+
+[node name="Level" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Board1" type="Sprite" parent="."]
+position = Vector2( 180, 180 )
+scale = Vector2( 0.330808, 0.331267 )
+texture = ExtResource( 3 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 20, 20 )
+cell_custom_transform = Transform2D( 20, 0, 0, 64, 0, 0 )
+format = 1
+tile_data = PoolIntArray( -65538, 10, 0, -65537, 10, 0, -131072, 10, 0, -131071, 10, 0, -131070, 10, 0, -131069, 10, 0, -131068, 10, 0, -131067, 10, 0, -131066, 10, 0, -131065, 10, 0, -131064, 10, 0, -131063, 10, 0, -131062, 10, 0, -131061, 10, 0, -131060, 10, 0, -131059, 10, 0, -131058, 10, 0, -131057, 10, 0, -131056, 10, 0, -131055, 10, 0, -131054, 10, 0, -131053, 10, 0, -2, 10, 0, -65517, 10, 0, 65534, 10, 0, 0, 10, 0, 1, 10, 0, 2, 10, 0, 3, 10, 0, 4, 10, 0, 5, 10, 0, 6, 10, 0, 7, 10, 0, 8, 10, 0, 9, 10, 0, 10, 10, 0, 11, 10, 0, 12, 10, 0, 13, 10, 0, 14, 10, 0, 15, 10, 0, 16, 10, 0, 17, 10, 0, 19, 10, 0, 131070, 10, 0, 65536, 10, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0, 65542, 1, 0, 65543, 1, 0, 65544, 1, 0, 65545, 1, 0, 65546, 10, 0, 65547, 10, 0, 65548, 10, 0, 65549, 10, 0, 65550, 10, 0, 65551, 10, 0, 65552, 10, 0, 65553, 10, 0, 65555, 10, 0, 196606, 10, 0, 131072, 10, 0, 131074, 10, 0, 131076, 1, 0, 131078, 1, 0, 131081, 1, 0, 131085, 5, 0, 131088, 1, 0, 131089, 1, 0, 131091, 10, 0, 262142, 10, 0, 196608, 10, 0, 196610, 9, 0, 196612, 1, 0, 196614, 1, 0, 196617, 1, 0, 196621, 1, 0, 196624, 1, 0, 196625, 1, 0, 196627, 10, 0, 327678, 10, 0, 262144, 10, 0, 262148, 1, 0, 262150, 1, 0, 262153, 1, 0, 262155, 1, 0, 262157, 1, 0, 262161, 1, 0, 262163, 10, 0, 393214, 10, 0, 327680, 10, 0, 327684, 1, 0, 327686, 1, 0, 327689, 1, 0, 327691, 1, 0, 327697, 1, 0, 327699, 10, 0, 458750, 10, 0, 393216, 10, 0, 393222, 1, 0, 393225, 1, 0, 393231, 1, 0, 393233, 1, 0, 393235, 10, 0, 524286, 10, 0, 458752, 10, 0, 458758, 1, 0, 458761, 1, 0, 458762, 1, 0, 458767, 1, 0, 458769, 1, 0, 458771, 10, 0, 589822, 10, 0, 524288, 10, 0, 524289, 1, 0, 524290, 1, 0, 524297, 1, 0, 524298, 1, 0, 524300, 1, 0, 524305, 1, 0, 524307, 10, 0, 655358, 10, 0, 589824, 10, 0, 589825, 10, 0, 589826, 10, 0, 589827, 1, 0, 589830, 4, 0, 589831, 4, 0, 589833, 1, 0, 589836, 1, 0, 589841, 1, 0, 589843, 10, 0, 720894, 10, 0, 655360, 10, 0, 655361, 10, 0, 655362, 10, 0, 655363, 10, 0, 655364, 1, 0, 655365, 1, 0, 655366, 1, 0, 655369, 1, 0, 655374, 1, 0, 655377, 1, 0, 655379, 10, 0, 786430, 10, 0, 720896, 10, 0, 720905, 1, 0, 720910, 1, 0, 720913, 1, 0, 720915, 10, 0, 851966, 10, 0, 786432, 10, 0, 786441, 1, 0, 786442, 1, 0, 786445, 1, 0, 786448, 1, 0, 786449, 1, 0, 786451, 10, 0, 917502, 10, 0, 851968, 10, 0, 851971, 1, 0, 851972, 1, 0, 851973, 1, 0, 851974, 1, 0, 851975, 1, 0, 851976, 1, 0, 851977, 1, 0, 851978, 1, 0, 851981, 1, 0, 851984, 1, 0, 851985, 1, 0, 851987, 10, 0, 983038, 10, 0, 917504, 10, 0, 917507, 10, 0, 917508, 10, 0, 917509, 10, 0, 917510, 10, 0, 917511, 10, 0, 917512, 10, 0, 917513, 10, 0, 917521, 1, 0, 917523, 10, 0, 1048574, 10, 0, 983040, 10, 0, 983057, 1, 0, 983059, 10, 0, 1114110, 10, 0, 1048576, 10, 0, 1048593, 1, 0, 1048595, 10, 0, 1179646, 10, 0, 1114112, 10, 0, 1114113, 10, 0, 1114114, 10, 0, 1114115, 10, 0, 1114116, 10, 0, 1114117, 10, 0, 1114118, 10, 0, 1114119, 10, 0, 1114120, 10, 0, 1114121, 10, 0, 1114122, 1, 0, 1114123, 1, 0, 1114124, 1, 0, 1114125, 1, 0, 1114126, 1, 0, 1114127, 1, 0, 1114128, 1, 0, 1114129, 1, 0, 1114131, 10, 0, 1245182, 10, 0, 1179667, 10, 0, 1310718, 10, 0, 1310719, 10, 0, 1245184, 10, 0, 1245185, 10, 0, 1245186, 10, 0, 1245187, 10, 0, 1245188, 10, 0, 1245189, 10, 0, 1245190, 10, 0, 1245191, 10, 0, 1245192, 10, 0, 1245193, 10, 0, 1245194, 10, 0, 1245195, 10, 0, 1245196, 10, 0, 1245197, 10, 0, 1245198, 10, 0, 1245199, 10, 0, 1245200, 10, 0, 1245201, 10, 0, 1245202, 10, 0, 1245203, 10, 0, 11665566, 5, 0 )
+
+[node name="Camera2D" type="Camera2D" parent="TileMap"]
+position = Vector2( 180, 180 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 52, 72 )
+
+[node name="musicbakcground" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -11.362
+pitch_scale = 0.87
+autoplay = true
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2( 180, 180 )
+scale = Vector2( 0.330808, 0.331267 )
+
+[node name="Exit" type="CollisionShape2D" parent="Exit"]
+position = Vector2( 278.107, -386.395 )
+shape = SubResource( 1 )
+
+[node name="Damage" type="Area2D" parent="."]
+
+[node name="Damage" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 12, 192 )
+shape = SubResource( 2 )
+
+[node name="Damage2" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 352, 192 )
+shape = SubResource( 2 )
+
+[node name="Damage3" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 182, 352 )
+rotation = 1.57079
+shape = SubResource( 2 )
+
+[node name="Damage4" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 182, 32 )
+rotation = 1.57079
+shape = SubResource( 2 )
+
+[node name="Damage5" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 192, 172 )
+shape = SubResource( 3 )
+
+[node name="Damage6" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 127.5, 272 )
+shape = SubResource( 4 )
+
+[node name="Damage7" type="CollisionShape2D" parent="Damage"]
+position = Vector2( -3, 172 )
+shape = SubResource( 4 )
+
+[node name="Damage8" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 92, 56 )
+rotation = 1.57079
+shape = SubResource( 4 )
+
+[node name="Damage9" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 132, 96 )
+rotation = 1.57079
+shape = SubResource( 4 )
+
+[node name="Damage10" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 232, 102 )
+shape = SubResource( 5 )
+
+[node name="Damage11" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 272, 82 )
+shape = SubResource( 5 )
+
+[node name="Damage12" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 312, 142 )
+shape = SubResource( 5 )
+
+[node name="Damage13" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 252, 182 )
+shape = SubResource( 5 )
+
+[node name="Damage14" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 292, 222 )
+shape = SubResource( 5 )
+
+[node name="Damage15" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 212, 262 )
+shape = SubResource( 5 )
+
+[node name="Damage19" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 332, 262 )
+shape = SubResource( 5 )
+
+[node name="Damage20" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 272, 262 )
+shape = SubResource( 5 )
+
+[node name="Damage21" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 212, 162 )
+shape = SubResource( 5 )
+
+[node name="Damage22" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 332, 62 )
+shape = SubResource( 5 )
+
+[node name="Damage16" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 122, 212 )
+rotation = 1.57079
+shape = SubResource( 5 )
+
+[node name="Damage17" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 92, 212 )
+shape = SubResource( 6 )
+
+[node name="Damage18" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 72, 192 )
+shape = SubResource( 6 )
+
+[connection signal="body_entered" from="Exit" to="." method="_on_Exit_body_entered"]
+[connection signal="body_entered" from="Damage" to="." method="_on_Damage_body_entered"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/hyperventilating.mp3-1bf6159665ed404e58d721b6fba99520.mp3str"
+
+[deps]
+
+source_file="res://levels/hyperventilating.mp3"
+dest_files=[ "res://.import/hyperventilating.mp3-1bf6159665ed404e58d721b6fba99520.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

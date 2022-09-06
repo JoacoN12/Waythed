@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://levels/screamerrfinal.webm" type="VideoStream" id=1]
+[ext_resource path="res://Screamerfinal.gd" type="Script" id=2]
+
+[node name="Screamerfinal" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Lastscene" type="VideoPlayer" parent="."]
+margin_right = 361.0
+margin_bottom = 360.0
+stream = ExtResource( 1 )
+autoplay = true
+
+[node name="tree" type="Timer" parent="."]
+wait_time = 5.1
+autostart = true
+
+[node name="tree2" type="Timer" parent="."]
+wait_time = 2.6
+autostart = true
+
+[connection signal="timeout" from="tree" to="." method="_on_tree_timeout"]
+[connection signal="timeout" from="tree2" to="." method="_on_tree2_timeout"]

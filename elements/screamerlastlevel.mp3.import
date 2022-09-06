@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/screamerlastlevel.mp3-c35a398dd00833c0685358ce2e3c6d98.mp3str"
+
+[deps]
+
+source_file="res://elements/screamerlastlevel.mp3"
+dest_files=[ "res://.import/screamerlastlevel.mp3-c35a398dd00833c0685358ce2e3c6d98.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

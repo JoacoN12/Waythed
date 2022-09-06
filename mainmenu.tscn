@@ -1,0 +1,71 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://menu/mainmenu.png" type="Texture" id=1]
+[ext_resource path="res://mainmenu.gd" type="Script" id=2]
+[ext_resource path="res://menu/playmenu2.png" type="Texture" id=3]
+[ext_resource path="res://menu/playmenu.png" type="Texture" id=4]
+[ext_resource path="res://menu/help1.png" type="Texture" id=5]
+[ext_resource path="res://menu/no1.png" type="Texture" id=6]
+[ext_resource path="res://menu/mainmenu.mp3" type="AudioStream" id=7]
+[ext_resource path="res://credits2.png" type="Texture" id=8]
+[ext_resource path="res://elements/vsyncverde.png" type="Texture" id=9]
+[ext_resource path="res://elements/vsyncred.png" type="Texture" id=10]
+[ext_resource path="res://elements/gamevolumeoff.png" type="Texture" id=11]
+[ext_resource path="res://elements/gamevolumeoffred.png" type="Texture" id=12]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Mainmenu" type="Sprite" parent="."]
+position = Vector2( 180, 180 )
+scale = Vector2( 0.333333, 0.333333 )
+texture = ExtResource( 1 )
+
+[node name="PlayButton" type="TextureButton" parent="Mainmenu"]
+margin_left = -330.0
+margin_top = 2.28882e-05
+margin_right = 316.0
+margin_bottom = 223.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+
+[node name="QuitButton" type="TextureButton" parent="Mainmenu"]
+margin_left = -330.0
+margin_top = 240.0
+margin_right = 316.0
+margin_bottom = 464.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+
+[node name="Vsync" type="TextureButton" parent="Mainmenu"]
+margin_left = -519.001
+margin_top = 321.0
+margin_right = -373.001
+margin_bottom = 464.0
+toggle_mode = true
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+
+[node name="Volume" type="TextureButton" parent="Mainmenu"]
+margin_left = 360.0
+margin_top = 321.0
+margin_right = 506.0
+margin_bottom = 464.0
+toggle_mode = true
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 12 )
+
+[node name="Credits2" type="Sprite" parent="Mainmenu"]
+position = Vector2( 0.0540771, 510.872 )
+scale = Vector2( 0.821402, 0.845805 )
+texture = ExtResource( 8 )
+
+[node name="MainMenu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -2.539
+autoplay = true
+
+[connection signal="pressed" from="Mainmenu/PlayButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="Mainmenu/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="Mainmenu/Vsync" to="." method="_on_Vsync_pressed"]
+[connection signal="pressed" from="Mainmenu/Volume" to="." method="_on_Volume_pressed"]

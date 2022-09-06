@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/goofyahsound.mp3-d229cb3792afce314f7d8024427bb4ca.mp3str"
+
+[deps]
+
+source_file="res://levels/goofyahsound.mp3"
+dest_files=[ "res://.import/goofyahsound.mp3-d229cb3792afce314f7d8024427bb4ca.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

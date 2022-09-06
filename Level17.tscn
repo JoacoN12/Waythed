@@ -1,0 +1,128 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Level17.gd" type="Script" id=1]
+[ext_resource path="res://Elements.tres" type="TileSet" id=2]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://elements/screamerlastlevel.mp3" type="AudioStream" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 12, 12 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 8, 33 )
+
+[node name="Level17" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="fondonegro" type="ColorRect" parent="."]
+margin_left = -12.0
+margin_top = -9.0
+margin_right = 373.0
+margin_bottom = 369.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 180, 180 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 20, 20 )
+cell_custom_transform = Transform2D( 20, 0, 0, 64, 0, 0 )
+format = 1
+tile_data = PoolIntArray( -65538, 10, 0, -65537, 10, 0, -131072, 10, 0, -131071, 10, 0, -131070, 10, 0, -131069, 10, 0, -131068, 10, 0, -131067, 10, 0, -131066, 10, 0, -131065, 10, 0, -131064, 10, 0, -131063, 10, 0, -131062, 10, 0, -131061, 10, 0, -131060, 10, 0, -131059, 10, 0, -131058, 10, 0, -131057, 10, 0, -131056, 10, 0, -131055, 10, 0, -131054, 10, 0, -131053, 10, 0, -2, 10, 0, -65517, 10, 0, 65534, 10, 0, 0, 10, 0, 1, 10, 0, 2, 10, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0, 16, 1, 0, 17, 1, 0, 19, 10, 0, 131070, 10, 0, 65536, 10, 0, 65539, 10, 0, 65553, 1, 0, 65555, 10, 0, 196606, 10, 0, 131072, 10, 0, 131076, 10, 0, 131082, 10, 0, 131083, 10, 0, 131084, 10, 0, 131089, 1, 0, 131091, 10, 0, 262142, 10, 0, 196608, 10, 0, 196612, 1, 0, 196613, 10, 0, 196617, 10, 0, 196618, 1, 0, 196619, 1, 0, 196620, 1, 0, 196621, 10, 0, 196625, 1, 0, 196627, 10, 0, 327678, 10, 0, 262144, 1, 0, 262145, 10, 0, 262146, 1, 0, 262149, 1, 0, 262150, 10, 0, 262151, 10, 0, 262152, 10, 0, 262153, 1, 0, 262158, 10, 0, 262161, 1, 0, 262163, 10, 0, 393214, 10, 0, 327680, 1, 0, 327682, 10, 0, 327687, 2, 0, 327695, 10, 0, 327697, 1, 0, 327699, 10, 0, 458750, 10, 0, 393216, 1, 0, 393219, 10, 0, 393223, 2, 0, 393226, 10, 0, 393227, 10, 0, 393228, 1, 0, 393231, 10, 0, 393233, 1, 0, 393235, 10, 0, 524286, 10, 0, 458752, 1, 0, 458756, 10, 0, 458757, 1, 0, 458759, 2, 0, 458761, 10, 0, 458764, 10, 0, 458767, 10, 0, 458769, 1, 0, 458771, 10, 0, 589822, 10, 0, 524288, 1, 0, 524293, 10, 0, 524294, 10, 0, 524295, 10, 0, 524296, 10, 0, 524300, 10, 0, 524301, 2, 0, 524302, 2, 0, 524303, 10, 0, 524305, 1, 0, 524307, 10, 0, 655358, 10, 0, 589824, 1, 0, 589836, 10, 0, 589839, 10, 0, 589841, 1, 0, 589843, 10, 0, 720894, 10, 0, 655360, 1, 0, 655362, 10, 0, 655363, 10, 0, 655364, 10, 0, 655365, 10, 0, 655366, 10, 0, 655367, 10, 0, 655371, 10, 0, 655375, 10, 0, 655377, 1, 0, 655379, 10, 0, 786430, 10, 0, 720896, 1, 0, 720898, 10, 0, 720900, 1, 0, 720904, 10, 0, 720905, 10, 0, 720906, 10, 0, 720907, 1, 0, 720910, 1, 0, 720911, 10, 0, 720913, 1, 0, 720915, 10, 0, 851966, 10, 0, 786432, 1, 0, 786434, 10, 0, 786435, 8, 0, 786440, 2, 0, 786446, 10, 0, 786449, 1, 0, 786451, 10, 0, 917502, 10, 0, 851968, 1, 0, 851970, 10, 0, 851974, 1, 0, 851976, 2, 0, 851981, 10, 0, 851985, 1, 0, 851987, 10, 0, 983038, 10, 0, 917504, 1, 0, 917506, 10, 0, 917507, 10, 0, 917508, 10, 0, 917509, 10, 0, 917510, 10, 0, 917512, 2, 0, 917515, 1, 0, 917516, 10, 0, 917521, 1, 0, 917523, 10, 0, 1048574, 10, 0, 983040, 1, 0, 983047, 10, 0, 983048, 10, 0, 983049, 10, 0, 983050, 10, 0, 983051, 10, 0, 983057, 1, 0, 983059, 10, 0, 1114110, 10, 0, 1048576, 1, 0, 1048593, 1, 0, 1048595, 10, 0, 1179646, 10, 0, 1114112, 1, 0, 1114113, 1, 0, 1114114, 1, 0, 1114115, 1, 0, 1114116, 1, 0, 1114117, 1, 0, 1114118, 1, 0, 1114119, 1, 0, 1114120, 1, 0, 1114121, 1, 0, 1114122, 1, 0, 1114123, 1, 0, 1114124, 1, 0, 1114125, 1, 0, 1114126, 1, 0, 1114127, 1, 0, 1114128, 1, 0, 1114129, 1, 0, 1114131, 10, 0, 1245182, 10, 0, 1179667, 10, 0, 1310718, 10, 0, 1310719, 10, 0, 1245184, 10, 0, 1245185, 10, 0, 1245186, 10, 0, 1245187, 10, 0, 1245188, 10, 0, 1245189, 10, 0, 1245190, 10, 0, 1245191, 10, 0, 1245192, 10, 0, 1245193, 10, 0, 1245194, 10, 0, 1245195, 10, 0, 1245196, 10, 0, 1245197, 10, 0, 1245198, 10, 0, 1245199, 10, 0, 1245200, 10, 0, 1245201, 10, 0, 1245202, 10, 0, 1245203, 10, 0, 11665566, 5, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 32, 33 )
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2( 274, 286 )
+
+[node name="Exit" type="CollisionShape2D" parent="Exit"]
+position = Vector2( -202, -34 )
+shape = SubResource( 1 )
+
+[node name="Damage" type="Area2D" parent="."]
+
+[node name="Damage" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 52, 92 )
+shape = SubResource( 2 )
+
+[node name="Damage2" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 92, 72 )
+shape = SubResource( 2 )
+
+[node name="Damage3" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 112, 92 )
+shape = SubResource( 2 )
+
+[node name="Damage4" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 112, 152 )
+shape = SubResource( 2 )
+
+[node name="Damage5" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 192, 92 )
+shape = SubResource( 2 )
+
+[node name="Damage6" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 212, 72 )
+shape = SubResource( 2 )
+
+[node name="Damage7" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 232, 72 )
+shape = SubResource( 2 )
+
+[node name="Damage8" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 252, 72 )
+shape = SubResource( 2 )
+
+[node name="Damage9" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 252, 132 )
+shape = SubResource( 2 )
+
+[node name="Damage10" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 292, 232 )
+shape = SubResource( 2 )
+
+[node name="Damage11" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 232, 232 )
+shape = SubResource( 2 )
+
+[node name="Damage12" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 132, 272 )
+shape = SubResource( 2 )
+
+[node name="Damage14" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 232, 292 )
+shape = SubResource( 2 )
+
+[node name="Damage13" type="CollisionShape2D" parent="Damage"]
+position = Vector2( 92, 232 )
+shape = SubResource( 2 )
+
+[node name="AreaOff" type="Area2D" parent="."]
+
+[node name="Off" type="CollisionShape2D" parent="AreaOff"]
+position = Vector2( 152, 132 )
+shape = SubResource( 5 )
+
+[node name="Off3" type="CollisionShape2D" parent="AreaOff"]
+position = Vector2( 173, 272 )
+shape = SubResource( 5 )
+
+[node name="Off2" type="CollisionShape2D" parent="AreaOff"]
+position = Vector2( 284, 173 )
+rotation = 1.57079
+shape = SubResource( 5 )
+
+[node name="musiclast" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -10.487
+pitch_scale = 0.56
+autoplay = true
+
+[connection signal="body_entered" from="Exit" to="." method="_on_Exit_body_entered"]
+[connection signal="body_entered" from="Damage" to="." method="_on_Damage_body_entered"]
+[connection signal="body_entered" from="AreaOff" to="." method="_on_AreaOff_body_entered"]
